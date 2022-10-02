@@ -6,9 +6,6 @@ import authInstructor from "./routes/authInstructor.js"
 import courses from "./routes/courses.js"
 import { config } from "dotenv"
 import path from "path"
-import { fileURLToPath } from 'url'
-
-const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express()
@@ -20,18 +17,19 @@ config()
 app.use('/authUser', authUser)
 app.use('/authInstructor', authInstructor)
 app.use('/courses', courses)
-app.use(express.static(path.join(__dirname, "/client/build")))
 
-app.get("*", (_, res)=>{
-    res.sendFile(
-        path.join(__dirname, "/client/build/index.html"),
-        (err) => {
-            if (err) {
-                res.status(500).send(err)
-            }
-        }
-    )
-})
+if (process.env.NODE_ENV === 'production'){
+    app.use(express.static(path.join(__dirname, '/client/build')))
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+    });
+}
+else{
+    app.get('/', (req, res) => {
+        res.send('Server is Running! 🚀');
+    });
+}
 
 const port = process.env.PORT || 9002
 app.listen(port, () => {
