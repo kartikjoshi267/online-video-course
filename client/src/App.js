@@ -4,6 +4,7 @@ import Login from "./components/login/login"
 import Register from "./components/register/register"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useState } from 'react';
+import CoursePage from './components/coursePage/coursePage';
 
 function App() {
 
@@ -16,8 +17,13 @@ function App() {
             {
               // user && user._id ? <Homepage setLoginUser={setLoginUser} /> : <Login setLoginUser={setLoginUser}/>
               <Homepage />
+
             }
           </Route>
+          <Route path="/course">
+            <CoursePage />
+          </Route>
+
           <Route path="/login">
             <Login setLoginUser={setLoginUser} />
           </Route>

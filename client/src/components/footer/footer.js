@@ -33,16 +33,7 @@ const Footer = () => {
                     <li className="fListItem">Course </li>
                     <li className="fListItem">Course </li>
                 </ul>
-                <ul className="fList">
-                    <li className="fListItem">Course</li>
-                    <li className="fListItem">Course</li>
-                    <li className="fListItem">Course</li>
-                    <li className="fListItem">Course</li>
-                    <li className="fListItem">Course</li>
-                    <li className="fListItem">Course</li>
-                    <li className="fListItem">Course</li>
-                    <li className="fListItem">Course</li>
-                </ul>
+
             </div>
             <div className="fText">Copyright © 2022 Cousera.</div>
         </div>
