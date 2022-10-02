@@ -11,7 +11,7 @@ const Navbar = () => {
     return (
         <div className="navbar">
             <div className="navContainer">
-                <img className="image-logo" src= {logo1} placeholder="  Search"/>
+                <img className="image-logo" src= {logo1}/>
                 <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
                     <span className="logo">Coursify</span>
                 </Link>
@@ -43,7 +43,7 @@ const Navbar = () => {
                         </ul>
                     </li>
                 </ul>
-                <input className="search" type= 'text'/>
+                <input className="search" type= 'text'  placeholder= 'Search....'/>
                 <div className="study">Study Materials</div>
                 <div className="study">Study Materials</div>
                 <div className="navItems">
