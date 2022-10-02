@@ -37,6 +37,7 @@ const Register = () => {
     }
 
     return (
+        <div className="main-login">
         <div className="register">
             {console.log("User", user)}
             <h1>Register</h1>
@@ -47,6 +48,7 @@ const Register = () => {
             <div className="button" onClick={register} >Register</div>
             <div>or</div>
             <div className="button" onClick={() => history.push("/login")}>Login</div>
+        </div>
         </div>
     )
 }
