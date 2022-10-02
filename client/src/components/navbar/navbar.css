@@ -1,14 +1,78 @@
 .navbar {
-    height: 100px;
+    height: 4.5rem;
     background-color: #003580;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+.logo-name {
+    font-size: 1.3rem;
+}
+.search {
+    width: 340px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+}
+.image-logo {
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+}
+.nested-dropdowns {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.nested-dropdowns li {
+    cursor: pointer;
+    padding: 0.25rem;
+    position: relative;
+    padding: 10px 30px;
+}
+
+.nested-dropdowns__item {
+    display: flex;
+}
+
+.nested-dropdowns__arrow {
+    display: flex;
+    margin-left: 10px;
+}
+
+.nested-dropdowns ul {
+    display: none;
+    background-color: rgb(34, 99, 156);
+    color: white;
+    width: 100%;
+    left: 0;
+    padding: 10px 0;
+    position: absolute;
+    list-style-type: none;
+    margin: 0;
+}
+
+.nested-dropdowns ul ul {
+    left: 100%;
+    position: absolute;
+    top: 0px;
+}
+
+.nested-dropdowns li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.nested-dropdowns li:hover > ul {
+    display: block;
 
 }
 
 .navContainer {
     width: 100%;
-    max-width: 1024px;
+    max-width: 1200px;
     color: white;
     display: flex;
     align-items: center;
@@ -16,17 +80,19 @@
 }
 
 .logo {
-    font-weight: 500;
-    font-size: 30px;
+    font-weight: 600;
+    font-size: 2rem;
 }
 
 .navButton {
-    margin-left: 20px;
+    /* margin-left: 20px; */
     border: none;
     height: 40px;
-    width: 150px;
+    /* width: 150px; */
     border-radius: 20px;
     padding: 5px 10px;
     cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
     color: #003580;
 }
