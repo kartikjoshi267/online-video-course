@@ -1,10 +1,10 @@
-import './App.css'
-import Homepage from "./components/homepage/homepage"
-import Login from "./components/login/login"
-import Register from "./components/register/register"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useState } from 'react';
-import "./"
+
+import Home from "./pages/home/home.jsx"
+import './App.css'
+import Login from "./pages/auth/login/login"
+import Register from "./pages/auth/register/register"
 
 function App() {
 
