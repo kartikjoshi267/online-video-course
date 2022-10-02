@@ -6,7 +6,7 @@ import authInstructor from "./routes/authInstructor.js"
 import courses from "./routes/courses.js"
 import { config } from "dotenv"
 import path from "path"
-const __dirname = path.resolve();
+const __dirname = path.resolve()
 
 const app = express()
 app.use(express.json())
@@ -17,11 +17,11 @@ config()
 app.use('/authUser', authUser)
 app.use('/authInstructor', authInstructor)
 app.use('/courses', courses)
-app.use(express.static(path.join(__dirname, "./client/build")))
+app.use(express.static(path.join(__dirname, "/client/build")))
 
 app.get("*", (_, res)=>{
     res.sendFile(
-        path.join(__dirname, "./client/build/index.html"),
+        path.join(__dirname, "/client/build/index.html"),
         (err) => {
             if (err) {
                 res.status(500).send(err)
