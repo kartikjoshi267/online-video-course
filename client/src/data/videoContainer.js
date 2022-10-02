@@ -1,5 +1,5 @@
 import React from "react";
-import "./homepage/homepage.css";
+import "./homepage.css";
 
 export default function VideoContainer(props) {
     return (
