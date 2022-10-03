@@ -2,9 +2,11 @@ import React from "react"
 import "./homepage.css"
 import Navbar from "../navbar/navbar"
 import Footer from "../footer/footer"
-import VideoContainer from "../videoContainer"
+import VideoSession from "../VideoSession/VideoSession"
 import CourseList from "../courseList"
 import { useHistory } from "react-router-dom"
+import ImageSlider from "../ImageSlider/ImageSlider"
+import LatestCourse from "../LatestCourse/LatestCourse"
 
 //const Homepage = ({ setLoginUser }) => {
 const Homepage = () => {
@@ -12,8 +14,8 @@ const Homepage = () => {
     return (
         <div>
             <Navbar />
-
-            <img className="header" src="https://growth-cdn.vedantu.com/vmkt/PROD/webp/1ffb5bfb-ce9c-4aed-9c17-b49e8e4857f1-1663833464546-4102418410874681.webp" />
+            <ImageSlider />
+            
             <div className="course">
                 Courses Offered
 
@@ -29,25 +31,16 @@ const Homepage = () => {
                 </div>
                 Latest Courses
                 <div className="latest">
-                    <img className="latestimage" src="https://growth-cdn.vedantu.com/vmkt/PROD/webp/1ffb5bfb-ce9c-4aed-9c17-b49e8e4857f1-1663833464546-4102418410874681.webp" />
-                    <img className="latestimage" src="https://growth-cdn.vedantu.com/vmkt/PROD/webp/1ffb5bfb-ce9c-4aed-9c17-b49e8e4857f1-1663833464546-4102418410874681.webp" />
-                    <img className="latestimage" src="https://growth-cdn.vedantu.com/vmkt/PROD/webp/1ffb5bfb-ce9c-4aed-9c17-b49e8e4857f1-1663833464546-4102418410874681.webp" />
+                    <LatestCourse />
                 </div>
                 <div className="free">
                     Free Video Session
                     <div className="videoList">
-
-                        <VideoContainer image="https://growth-cdn.vedantu.com/vmkt/PROD/webp/1ffb5bfb-ce9c-4aed-9c17-b49e8e4857f1-1663833464546-4102418410874681.webp" subject="maths" topic="trignometry" author="Divya Kapadia" />
-                        <VideoContainer image="https://growth-cdn.vedantu.com/vmkt/PROD/webp/1ffb5bfb-ce9c-4aed-9c17-b49e8e4857f1-1663833464546-4102418410874681.webp" subject="maths" topic="trignometry" author="Divya Kapadia" />
-                        <VideoContainer image="https://growth-cdn.vedantu.com/vmkt/PROD/webp/1ffb5bfb-ce9c-4aed-9c17-b49e8e4857f1-1663833464546-4102418410874681.webp" subject="maths" topic="trignometry" author="Divya Kapadia" />
+                        <VideoSession />
                     </div>
                 </div>
-
-
             </div>
             <Footer />
-
-
 
         </div>
 
