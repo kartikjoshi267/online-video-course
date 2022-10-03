@@ -60,9 +60,6 @@ const Carousel = styled(Slider)`
   .slick-list {
     overflow: hidden;
   }
-  button {
-    z-index: 1;
-  }
 `;
 
 const Wrap = styled.div`
