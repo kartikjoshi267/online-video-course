@@ -1,5 +1,5 @@
 import React from "react";
-import "./homepage/homepage.css"
+import "../pages/homepage/homepage.css"
 import { useHistory } from "react-router-dom";
 
 export default function CourseList(props) {

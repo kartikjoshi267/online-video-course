@@ -1,10 +1,10 @@
 import './App.css'
-import Homepage from "./components/homepage/homepage"
-import Login from "./components/login/login"
-import Register from "./components/register/register"
+import Homepage from "./pages/homepage/homepage"
+import Login from "./pages/login/login"
+import Register from "./pages/register/register"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useState } from 'react';
-import CoursePage from './components/coursePage/coursePage';
+import CoursePage from './pages/coursePage/coursePage';
 
 function App() {
 

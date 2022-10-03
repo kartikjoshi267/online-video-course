@@ -1,56 +1,79 @@
 import "./navbar.css"
 import { Link, useHistory } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
-const logo1 = process.env.PUBLIC_URL + "/vecteezy_simple-education-logo-design-template-book-icon-emblem-for_.jpg"
 const Navbar = () => {
     const history = useHistory();
-    const handleClick = () => {
+
+    const signIn = () => {
         history.push("/login")
     };
 
+    const signUp = () => {
+        history.push("/register")
+    }
+
     return (
-        <div className="navbar">
-            <div className="navContainer">
-                <img className="image-logo" src={logo1} placeholder="  Search" />
-                <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
-                    <span className="logo">Coursify</span>
-                </Link>
-                <ul class="nested-dropdowns">
-                    <li>
-                        <div class="nested-dropdowns__item">
-                            <span className="logo-name"> Catogeries</span>
-                        </div>
-                        <ul>
-                            <li>Study</li>
-                            <li>Study</li>
-                            <li>
-                                <div class="nested-dropdowns__item">
-                                    Study
-                                    <div class="nested-dropdowns__arrow">▶</div>
-                                </div>
-                                {/* <div> */}
-                                <ul>
-                                    <li>Study</li>
-                                    <li>Study</li>
-                                    <li>Study</li>
-                                    <li>Study</li>
-                                    <li>Study</li>
-                                </ul>
-                                {/* </div> */}
-                            </li>
-                            <li>Study</li>
-                            <li>Study</li>
-                        </ul>
-                    </li>
-                </ul>
-                <input className="search" type= 'text'  placeholder= 'Search....'/>
-                <div className="study">Study Materials</div>
-                <div className="study">Study Materials</div>
-                <div className="navItems">
-                    <button className="navButton" onClick={handleClick}>Login or Register</button>
+        <header className="header" id="header">
+
+            <nav className="navbar container">
+                <a href="./index.html">
+                    <h2 className="logo" >Coursefy</h2>
+                </a>
+
+                <div className="menu" id="menu">
+                    <ul className="list">
+                        <li className="list-item">
+                            <a href="#" className="list-link current">Home</a>
+                        </li>
+                        <li className="list-item">
+                            <a href="#" className="list-link">Categories</a>
+                        </li>
+                        <li className="list-item">
+                            <a href="#" className="list-link">Reviews</a>
+                        </li>
+                        <li className="list-item">
+                            <a href="#" className="list-link">News</a>
+                        </li>
+                        <li className="list-item">
+                            <a href="#" className="list-link">Membership</a>
+                        </li>
+                        <li className="list-item">
+                            <a href="#" className="list-link">Contact</a>
+                        </li>
+                        <li className="list-item screen-lg-hidden">
+                            <a href="./signin.html" className="list-link">Sign in</a>
+                        </li>
+                        <li className="list-item screen-lg-hidden">
+                            <a href="./signup.html" className="list-link">Sign up</a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-        </div>
+
+                <div className="list list-right">
+                    <button className="btn place-items-center" id="theme-toggle-btn">
+                        <i className="ri-sun-line sun-icon"></i>
+                        <i className="ri-moon-line moon-icon"></i>
+                    </button>
+
+                    <button className="btn place-items-center" id="search-icon">
+                        <i className="ri-search-line"></i>
+                    </button>
+
+                    <button className="btn place-items-center screen-lg-hidden menu-toggle-icon" id="menu-toggle-icon">
+                        <i className="ri-menu-3-line open-menu-icon"></i>
+                        <i className="ri-close-line close-menu-icon"></i>
+                    </button>
+
+                    <a href="#" className="list-link screen-sm-hidden" onClick={signIn}>Sign in</a>
+                    <a href="#" className="btn sign-up-btn fancy-border screen-sm-hidden" onClick={signUp}>
+                        <span>Sign up</span>
+                    </a>
+                </div>
+
+            </nav>
+
+        </header >
     )
 }
 

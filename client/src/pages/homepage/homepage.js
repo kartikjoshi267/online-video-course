@@ -1,12 +1,12 @@
 import React from "react"
 import "./homepage.css"
-import Navbar from "../navbar/navbar"
-import Footer from "../footer/footer"
-import VideoSession from "../VideoSession/VideoSession"
-import CourseList from "../courseList"
+import Navbar from "../../components/navbar/navbar"
+import Footer from "../../components/footer/footer"
+import VideoSession from "../../components/VideoSession/VideoSession"
+import CourseList from "../../components/courseList"
 import { useHistory } from "react-router-dom"
-import ImageSlider from "../ImageSlider/ImageSlider"
-import LatestCourse from "../LatestCourse/LatestCourse"
+import ImageSlider from "../../components/ImageSlider/ImageSlider"
+import LatestCourse from "../../components/LatestCourse/LatestCourse"
 
 //const Homepage = ({ setLoginUser }) => {
 const Homepage = () => {
@@ -15,7 +15,7 @@ const Homepage = () => {
         <div>
             <Navbar />
             <ImageSlider />
-            
+
             <div className="course">
                 Courses Offered
 
@@ -40,6 +40,7 @@ const Homepage = () => {
                     </div>
                 </div>
             </div>
+
             <Footer />
 
         </div>
