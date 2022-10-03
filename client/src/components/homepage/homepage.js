@@ -8,13 +8,7 @@ import { useHistory } from "react-router-dom"
 
 //const Homepage = ({ setLoginUser }) => {
 const Homepage = () => {
-    const history = useHistory();
 
-    const handleClick = () => {
-
-        history.push("/course")
-
-    };
     return (
         <div>
             <Navbar />
@@ -24,7 +18,7 @@ const Homepage = () => {
                 Courses Offered
 
                 <div className="courseList">
-                    <CourseList image="https://yt3.ggpht.com/a/AGF-l7_DudcXuxN_j4G-4vEX6jOtOB_WOnX5wUt9cQ=s900-c-k-c0xffffffff-no-rj-mo" text="TEXT" onClick={handleClick} />
+                    <CourseList image="https://yt3.ggpht.com/a/AGF-l7_DudcXuxN_j4G-4vEX6jOtOB_WOnX5wUt9cQ=s900-c-k-c0xffffffff-no-rj-mo" text="TEXT" />
                     <CourseList image="https://yt3.ggpht.com/a/AGF-l7_DudcXuxN_j4G-4vEX6jOtOB_WOnX5wUt9cQ=s900-c-k-c0xffffffff-no-rj-mo" text="TEXT" />
                     <CourseList image="https://yt3.ggpht.com/a/AGF-l7_DudcXuxN_j4G-4vEX6jOtOB_WOnX5wUt9cQ=s900-c-k-c0xffffffff-no-rj-mo" text="TEXT" />
                     <CourseList image="https://yt3.ggpht.com/a/AGF-l7_DudcXuxN_j4G-4vEX6jOtOB_WOnX5wUt9cQ=s900-c-k-c0xffffffff-no-rj-mo" text="TEXT" />

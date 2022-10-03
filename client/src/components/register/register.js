@@ -35,20 +35,24 @@ const Register = () => {
         }
 
     }
+    const logo1 = process.env.PUBLIC_URL + "/vecteezy_simple-education-logo-design-template-book-icon-emblem-for_.jpg"
 
     return (
         <div className="main-login">
-        <div className="register">
-            {console.log("User", user)}
-            <h1>Register</h1>
-            <input type="text" name="name" value={user.name} placeholder="Your Name" onChange={handleChange}></input>
-            <input type="text" name="email" value={user.email} placeholder="Your Email" onChange={handleChange}></input>
-            <input type="password" name="password" value={user.password} placeholder="Your Password" onChange={handleChange}></input>
-            <input type="password" name="reEnterPassword" value={user.reEnterPassword} placeholder="Re-enter Password" onChange={handleChange}></input>
-            <div className="button" onClick={register} >Register</div>
-            <div>or</div>
-            <div className="button" onClick={() => history.push("/login")}>Login</div>
-        </div>
+            <img className="imageLogin" src="login 1.png" />
+            <div className="register">
+                {console.log("User", user)}
+                <img className="logo" src={logo1} />
+                <h3>Let's Learn Together !!</h3><br></br>
+                <input type="text" name="name" value={user.name} placeholder="Your Name" onChange={handleChange}></input>
+                <input type="text" name="email" value={user.email} placeholder="Your Email" onChange={handleChange}></input>
+                <input type="password" name="password" value={user.password} placeholder="Your Password" onChange={handleChange}></input>
+                <input type="password" name="reEnterPassword" value={user.reEnterPassword} placeholder="Re-enter Password" onChange={handleChange}></input>
+                <div className="button" onClick={register} >Register</div>
+                <div><h3>or</h3></div><br></br>
+                <span>Already have an Account?</span><br></br><br></br>
+                <span style={{ color: "blue", fontSize: "20px", cursor: "pointer" }} onClick={() => history.push("/login")}>Login</span>
+            </div>
         </div>
     )
 }
