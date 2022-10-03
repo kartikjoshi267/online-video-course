@@ -11,7 +11,7 @@ const Navbar = () => {
     return (
         <div className="navbar">
             <div className="navContainer">
-                <img className="image-logo" src= {logo1}/>
+                <img className="image-logo" src={logo1} placeholder="  Search" />
                 <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
                     <span className="logo">Coursify</span>
                 </Link>
@@ -25,7 +25,7 @@ const Navbar = () => {
                             <li>Study</li>
                             <li>
                                 <div class="nested-dropdowns__item">
-                                Study
+                                    Study
                                     <div class="nested-dropdowns__arrow">▶</div>
                                 </div>
                                 {/* <div> */}
